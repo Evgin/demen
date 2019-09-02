@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'eg.demen'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'maven'
+
+dependencies {
+    implementation 'org.slf4j:slf4j-simple:1.7.28'
+    implementation 'org.projectlombok:lombok:1.18.8'
+    implementation 'eg.demen:ann-processor:1.0-SNAPSHOT'
+
+    annotationProcessor 'eg.demen:ann-processor:1.0-SNAPSHOT'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+}
